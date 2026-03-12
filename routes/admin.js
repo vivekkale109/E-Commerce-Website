@@ -3,6 +3,7 @@ const { authRequired } = require("../middleware/auth");
 const { adminRequired } = require("../middleware/admin");
 const Product = require("../models/Product");
 
+
 const router = express.Router();
 
 router.use(authRequired, adminRequired);

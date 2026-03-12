@@ -2,7 +2,7 @@
 # .gitignore - Git ignore rules for local-only files (node_modules, .env, OS files).
 # README.md - Project overview, setup steps, and feature list.
 # config/db.js - MySQL connection pool and schema initialization.
-middleware/admin.js - Admin-only access guard for protected routes.
+# middleware/admin.js - Admin-only access guard for protected routes.
 middleware/auth.js - Auth middleware that verifies JWT and attaches user to request.
 models/Order.js - Order data access (list orders, find by payment intent, create order).
 models/Product.js - Product data access (list, categories, find, create, update, delete, replace).
