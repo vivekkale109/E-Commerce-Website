@@ -9,7 +9,7 @@ const init = async () => {
   try {
     const orders = await api("/api/orders");
     if (orders.length === 0) {
-      list.innerHTML = `<div class="notice">No orders yet. Your purchases will appear here.</div>`;
+      list.innerHTML = `<div class="notice">No orders yet. Your completed orders will show up here.</div>`;
       return;
     }
 
@@ -17,18 +17,16 @@ const init = async () => {
       .map(
         (order) => `
         <div class="order-card">
-          <div><strong>Order Date:</strong> ${new Date(order.createdAt).toLocaleDateString()}</div>
-          <div><strong>Status:</strong> ${order.status}</div>
-          <div><strong>Total:</strong> ${formatCurrency(order.total)}</div>
-          <div><strong>Items:</strong> ${order.items
-            .map((item) => `${item.name} x${item.quantity}`)
-            .join(", ")}</div>
+          <strong>Order ${order._id.slice(-6).toUpperCase()}</strong>
+          <span>${new Date(order.createdAt).toLocaleDateString()}</span>
+          <span>Total: ${formatCurrency(order.total)}</span>
+          <span>Status: ${order.status}</span>
         </div>
       `
       )
       .join("");
   } catch (err) {
-    list.innerHTML = `<div class="notice">Please login to view your orders.</div>`;
+    list.innerHTML = `<div class="notice">Please log in to view your orders.</div>`;
   }
 };
 
