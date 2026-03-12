@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Lumen Market</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <div data-nav></div>
+    <main class="container section">
+      <h2>Checkout</h2>
+      <div class="cart-layout">
+        <div>
+          <h3>Shipping details</h3>
+          <form class="form" data-checkout>
+            <input class="input" name="fullName" placeholder="Full name" required />
+            <input class="input" name="address1" placeholder="Address line 1" required />
+            <input class="input" name="address2" placeholder="Address line 2" />
+            <div class="form-row">
+              <input class="input" name="city" placeholder="City" required />
+              <input class="input" name="state" placeholder="State" required />
+            </div>
+            <div class="form-row">
+              <input class="input" name="postalCode" placeholder="Postal code" required />
+              <input class="input" name="country" placeholder="Country" required />
+            </div>
+            <label>
+              Card details
+              <div id="card-element" class="input" style="padding: 14px;"></div>
+            </label>
+            <button class="button" type="submit">Pay now</button>
+            <p class="notice" data-message></p>
+          </form>
+        </div>
+        <div class="cart-summary">
+          <h3>Order summary</h3>
+          <div data-summary></div>
+          <p>Total</p>
+          <h2 data-total>$0.00</h2>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/js/checkout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart - Lumen Market</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div data-nav></div>
+    <main class="container section">
+      <h2>Your Cart</h2>
+      <div class="cart-layout">
+        <div data-cart-list></div>
+        <div class="cart-summary">
+          <h3>Order Summary</h3>
+          <p>Total</p>
+          <h2 data-cart-total>$0.00</h2>
+          <button class="button" data-checkout>Checkout</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/js/cart.js"></script>
+  </body>
+</html>
