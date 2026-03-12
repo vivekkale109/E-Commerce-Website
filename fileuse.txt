@@ -11,7 +11,7 @@
 # models/Wishlist.js - Wishlist data access (list, add/remove, status).
 # package.json - Node app metadata, scripts, and dependencies.
 # public/admin.html - Admin dashboard UI for product management.
-public/cancel.html - Payment cancelled page.
+# public/cancel.html - Payment cancelled page.
 public/cart.html - Cart page UI.
 public/checkout.html - Checkout page UI with Stripe card element.
 # public/css/style.css - Global styles and layout.
