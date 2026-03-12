@@ -5,7 +5,7 @@
 # middleware/admin.js - Admin-only access guard for protected routes.
 # middleware/auth.js - Auth middleware that verifies JWT and attaches user to request.
 # models/Order.js - Order data access (list orders, find by payment intent, create order).
-models/Product.js - Product data access (list, categories, find, create, update, delete, replace).
+# models/Product.js - Product data access (list, categories, find, create, update, delete, replace).
 models/Review.js - Review data access (list, upsert, ratings summary).
 models/User.js - User data access (create, find by email/id).
 models/Wishlist.js - Wishlist data access (list, add/remove, status).

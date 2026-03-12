@@ -1,5 +1,6 @@
 const { getDb } = require("../config/db");
 
+
 const mapProduct = (row) => ({
   _id: row.id,
   name: row.name,
