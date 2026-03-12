@@ -2,6 +2,7 @@
 
 A modern full-stack e-commerce demo with product browsing, cart management, authentication, Stripe payments, and order history.
 
+
 ## Features
 - Product listing with search and category filter
 - Product details with multi-image gallery and quantity selector
