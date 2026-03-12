@@ -15,4 +15,5 @@ const authRequired = (req, res, next) => {
   }
 };
 
+
 module.exports = { authRequired };
