@@ -7,7 +7,7 @@
 # models/Order.js - Order data access (list orders, find by payment intent, create order).
 # models/Product.js - Product data access (list, categories, find, create, update, delete, replace).
 # models/Review.js - Review data access (list, upsert, ratings summary).
-models/User.js - User data access (create, find by email/id).
+# models/User.js - User data access (create, find by email/id).
 models/Wishlist.js - Wishlist data access (list, add/remove, status).
 package.json - Node app metadata, scripts, and dependencies.
 public/admin.html - Admin dashboard UI for product management.
