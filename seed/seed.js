@@ -73,8 +73,7 @@ const sampleProducts = [
 
 const run = async () => {
   await connectDb();
-  await Product.deleteMany({});
-  await Product.insertMany(sampleProducts);
+  await Product.replaceAll(sampleProducts);
   console.log("Seeded products:", sampleProducts.length);
   process.exit(0);
 };

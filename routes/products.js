@@ -5,23 +5,12 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const { q, category } = req.query;
-  const filter = {};
-  if (q) {
-    filter.$or = [
-      { name: { $regex: q, $options: "i" } },
-      { description: { $regex: q, $options: "i" } }
-    ];
-  }
-  if (category && category !== "all") {
-    filter.category = category;
-  }
-
-  const products = await Product.find(filter).sort({ createdAt: -1 });
+  const products = await Product.listProducts({ q, category });
   res.json(products);
 });
 
 router.get("/categories", async (req, res) => {
-  const categories = await Product.distinct("category");
+  const categories = await Product.getCategories();
   res.json(categories);
 });
 

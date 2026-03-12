@@ -8,7 +8,7 @@ const router = express.Router();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 router.get("/", authRequired, async (req, res) => {
-  const orders = await Order.find({ userId: req.user.id }).sort({ createdAt: -1 });
+  const orders = await Order.listByUser(req.user.id);
   res.json(orders);
 });
 
@@ -18,7 +18,7 @@ router.post("/confirm", authRequired, async (req, res) => {
     return res.status(400).json({ message: "Invalid order payload" });
   }
 
-  const existing = await Order.findOne({ paymentIntentId });
+  const existing = await Order.findByPaymentIntent(paymentIntentId);
   if (existing) {
     return res.json(existing);
   }
@@ -30,7 +30,7 @@ router.post("/confirm", authRequired, async (req, res) => {
     }
 
     const { orderItems, total } = await buildOrderFromItems(items);
-    const order = await Order.create({
+    const order = await Order.createOrder({
       userId: req.user.id,
       items: orderItems,
       shipping: {

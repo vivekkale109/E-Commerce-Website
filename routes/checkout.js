@@ -8,8 +8,8 @@ const router = express.Router();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 const buildOrderFromItems = async (items) => {
-  const ids = items.map((item) => item.productId);
-  const products = await Product.find({ _id: { $in: ids } });
+  const ids = items.map((item) => Number(item.productId));
+  const products = await Product.findByIds(ids);
   const productMap = new Map(products.map((p) => [String(p._id), p]));
 
   let total = 0;

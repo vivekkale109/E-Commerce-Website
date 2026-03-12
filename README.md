@@ -13,7 +13,7 @@ A modern full-stack e-commerce demo with product browsing, cart management, auth
 ## Tech Stack
 - Frontend: HTML, CSS, JavaScript (vanilla)
 - Backend: Node.js, Express.js
-- Database: MongoDB (Mongoose)
+- Database: MySQL
 - Payments: Stripe
 
 ## Getting Started
@@ -26,7 +26,7 @@ npm install
 
 2. Configure environment
 
-Create a `.env` file using `.env.example`.
+Create a `.env` file using `.env.example` and set your MySQL credentials.
 
 3. Seed products
 
