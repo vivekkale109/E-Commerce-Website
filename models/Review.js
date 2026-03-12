@@ -1,5 +1,6 @@
 const { getDb } = require("../config/db");
 
+
 const listForProduct = async (productId) => {
   const db = getDb();
   const [rows] = await db.query(
