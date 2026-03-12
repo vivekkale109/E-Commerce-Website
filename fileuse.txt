@@ -10,7 +10,7 @@
 # models/User.js - User data access (create, find by email/id).
 # models/Wishlist.js - Wishlist data access (list, add/remove, status).
 # package.json - Node app metadata, scripts, and dependencies.
-public/admin.html - Admin dashboard UI for product management.
+# public/admin.html - Admin dashboard UI for product management.
 public/cancel.html - Payment cancelled page.
 public/cart.html - Cart page UI.
 public/checkout.html - Checkout page UI with Stripe card element.
