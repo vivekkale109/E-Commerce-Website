@@ -1,5 +1,5 @@
 # .env.example - Sample environment variables for local setup (MySQL, Stripe, admin seed, JWT, port).
-.gitignore - Git ignore rules for local-only files (node_modules, .env, OS files).
+# .gitignore - Git ignore rules for local-only files (node_modules, .env, OS files).
 README.md - Project overview, setup steps, and feature list.
 config/db.js - MySQL connection pool and schema initialization.
 middleware/admin.js - Admin-only access guard for protected routes.
