@@ -57,6 +57,61 @@ const findByIds = async (ids) => {
   return rows.map(mapProduct);
 };
 
+const createProduct = async ({ name, description, price, category, images, stock }) => {
+  const db = getDb();
+  const [result] = await db.query(
+    "INSERT INTO products (name, description, price, category, images, stock) VALUES (?, ?, ?, ?, ?, ?)",
+    [name, description, price, category, JSON.stringify(images || []), stock || 0]
+  );
+  return findById(result.insertId);
+};
+
+const updateProduct = async (id, updates) => {
+  const fields = [];
+  const values = [];
+
+  if (updates.name !== undefined) {
+    fields.push("name = ?");
+    values.push(updates.name);
+  }
+  if (updates.description !== undefined) {
+    fields.push("description = ?");
+    values.push(updates.description);
+  }
+  if (updates.price !== undefined) {
+    fields.push("price = ?");
+    values.push(updates.price);
+  }
+  if (updates.category !== undefined) {
+    fields.push("category = ?");
+    values.push(updates.category);
+  }
+  if (updates.images !== undefined) {
+    fields.push("images = ?");
+    values.push(JSON.stringify(updates.images));
+  }
+  if (updates.stock !== undefined) {
+    fields.push("stock = ?");
+    values.push(updates.stock);
+  }
+
+  if (!fields.length) {
+    return findById(id);
+  }
+
+  const db = getDb();
+  values.push(id);
+  const [result] = await db.query(`UPDATE products SET ${fields.join(", ")} WHERE id = ?`, values);
+  if (result.affectedRows === 0) return null;
+  return findById(id);
+};
+
+const deleteProduct = async (id) => {
+  const db = getDb();
+  const [result] = await db.query("DELETE FROM products WHERE id = ?", [id]);
+  return result.affectedRows > 0;
+};
+
 const replaceAll = async (products) => {
   const db = getDb();
   await db.query("DELETE FROM products");
@@ -80,5 +135,8 @@ module.exports = {
   getCategories,
   findById,
   findByIds,
+  createProduct,
+  updateProduct,
+  deleteProduct,
   replaceAll
 };

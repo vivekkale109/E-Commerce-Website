@@ -29,6 +29,16 @@ const connectDb = async () => {
   await initSchema();
 };
 
+const ensureColumn = async ({ table, column, definition }) => {
+  const [rows] = await pool.query(
+    `SELECT COUNT(*) as count FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = ? AND TABLE_NAME = ? AND COLUMN_NAME = ?`,
+    [process.env.MYSQL_DATABASE, table, column]
+  );
+  if (rows[0].count === 0) {
+    await pool.query(`ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`);
+  }
+};
+
 const initSchema = async () => {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS users (
@@ -36,6 +46,7 @@ const initSchema = async () => {
       name VARCHAR(120) NOT NULL,
       email VARCHAR(255) NOT NULL UNIQUE,
       password_hash VARCHAR(255) NOT NULL,
+      is_admin TINYINT DEFAULT 0,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
   `);
@@ -84,6 +95,8 @@ const initSchema = async () => {
       FOREIGN KEY (order_id) REFERENCES orders(id)
     )
   `);
+
+  await ensureColumn({ table: "users", column: "is_admin", definition: "TINYINT DEFAULT 0" });
 };
 
 const getDb = () => {

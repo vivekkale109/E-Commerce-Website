@@ -1,6 +1,8 @@
 require("dotenv").config();
+const bcrypt = require("bcryptjs");
 const { connectDb } = require("../config/db");
 const Product = require("../models/Product");
+const User = require("../models/User");
 
 const sampleProducts = [
   {
@@ -74,6 +76,19 @@ const sampleProducts = [
 const run = async () => {
   await connectDb();
   await Product.replaceAll(sampleProducts);
+  if (process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD) {
+    const existing = await User.findByEmail(process.env.ADMIN_EMAIL);
+    if (!existing) {
+      const passwordHash = await bcrypt.hash(process.env.ADMIN_PASSWORD, 12);
+      await User.createUser({
+        name: "Admin",
+        email: process.env.ADMIN_EMAIL,
+        passwordHash,
+        isAdmin: true
+      });
+      console.log("Admin user created:", process.env.ADMIN_EMAIL);
+    }
+  }
   console.log("Seeded products:", sampleProducts.length);
   process.exit(0);
 };

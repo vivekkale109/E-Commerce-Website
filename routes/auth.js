@@ -6,9 +6,13 @@ const User = require("../models/User");
 const router = express.Router();
 
 const createToken = (user) =>
-  jwt.sign({ id: user.id, email: user.email, name: user.name }, process.env.JWT_SECRET, {
+  jwt.sign(
+    { id: user.id, email: user.email, name: user.name, isAdmin: Boolean(user.isAdmin) },
+    process.env.JWT_SECRET,
+    {
     expiresIn: "7d"
-  });
+    }
+  );
 
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
@@ -32,7 +36,7 @@ router.post("/register", async (req, res) => {
     maxAge: 7 * 24 * 60 * 60 * 1000
   });
 
-  return res.json({ id: user.id, name: user.name, email: user.email });
+  return res.json({ id: user.id, name: user.name, email: user.email, isAdmin: user.isAdmin });
 });
 
 router.post("/login", async (req, res) => {
@@ -59,7 +63,7 @@ router.post("/login", async (req, res) => {
     maxAge: 7 * 24 * 60 * 60 * 1000
   });
 
-  return res.json({ id: user.id, name: user.name, email: user.email });
+  return res.json({ id: user.id, name: user.name, email: user.email, isAdmin: user.isAdmin });
 });
 
 router.post("/logout", async (req, res) => {

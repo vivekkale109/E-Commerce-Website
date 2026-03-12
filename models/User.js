@@ -7,17 +7,18 @@ const toUser = (row) =>
         name: row.name,
         email: row.email,
         passwordHash: row.password_hash,
+        isAdmin: Boolean(row.is_admin),
         createdAt: row.created_at
       }
     : null;
 
-const createUser = async ({ name, email, passwordHash }) => {
+const createUser = async ({ name, email, passwordHash, isAdmin = false }) => {
   const db = getDb();
   const [result] = await db.query(
-    "INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)",
-    [name, email, passwordHash]
+    "INSERT INTO users (name, email, password_hash, is_admin) VALUES (?, ?, ?, ?)",
+    [name, email, passwordHash, isAdmin ? 1 : 0]
   );
-  return { id: result.insertId, name, email };
+  return { id: result.insertId, name, email, isAdmin };
 };
 
 const findByEmail = async (email) => {

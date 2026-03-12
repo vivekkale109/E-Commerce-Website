@@ -8,6 +8,7 @@ const authRoutes = require("./routes/auth");
 const productRoutes = require("./routes/products");
 const checkoutRoutes = require("./routes/checkout");
 const orderRoutes = require("./routes/orders");
+const adminRoutes = require("./routes/admin");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/checkout", checkoutRoutes.router);
 app.use("/api/orders", orderRoutes);
+app.use("/api/admin", adminRoutes);
 
 app.get("/health", (req, res) => {
   res.json({ ok: true });

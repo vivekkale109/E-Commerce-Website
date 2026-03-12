@@ -9,6 +9,7 @@ A modern full-stack e-commerce demo with product browsing, cart management, auth
 - User registration and login
 - Checkout with Stripe Payment Intents
 - Order history for logged-in users
+- Admin dashboard with product management
 
 ## Tech Stack
 - Frontend: HTML, CSS, JavaScript (vanilla)
@@ -26,7 +27,7 @@ npm install
 
 2. Configure environment
 
-Create a `.env` file using `.env.example` and set your MySQL credentials.
+Create a `.env` file using `.env.example` and set your MySQL credentials. To seed an admin user, set `ADMIN_EMAIL` and `ADMIN_PASSWORD` before running the seed script.
 
 3. Seed products
 
@@ -48,3 +49,4 @@ Use Stripe test card `4242 4242 4242 4242` with any future date and any CVC.
 ## Notes
 - Orders are created after payment confirmation.
 - Cart data is stored in the browser using localStorage.
+- Admin dashboard is available at `/admin.html` for admin users.
