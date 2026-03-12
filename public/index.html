@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumen Market</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div data-nav></div>
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1>Curated essentials for modern living.</h1>
+          <p>
+            Explore premium accessories, home goods, and tech favorites. Every item ships fast and is
+            backed by secure checkout.
+          </p>
+          <div class="filters">
+            <input class="input" type="search" placeholder="Search products" data-search />
+            <select class="select" data-category></select>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Fresh picks, weekly</h2>
+          <p>Hand-selected products with tactile design, honest materials, and thoughtful details.</p>
+          <a class="button" href="/cart.html">Go to Cart</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Shop the collection</h2>
+        <div class="grid" data-product-grid></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">Secure payments powered by Stripe. Made for demo purposes.</div>
+    </footer>
+
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>
