@@ -1,5 +1,6 @@
 const mysql = require("mysql2/promise");
 
+
 let pool;
 
 const connectDb = async () => {
