@@ -1,0 +1,48 @@
+.env.example - Sample environment variables for local setup (MySQL, Stripe, admin seed, JWT, port).
+.gitignore - Git ignore rules for local-only files (node_modules, .env, OS files).
+README.md - Project overview, setup steps, and feature list.
+config/db.js - MySQL connection pool and schema initialization.
+middleware/admin.js - Admin-only access guard for protected routes.
+middleware/auth.js - Auth middleware that verifies JWT and attaches user to request.
+models/Order.js - Order data access (list orders, find by payment intent, create order).
+models/Product.js - Product data access (list, categories, find, create, update, delete, replace).
+models/Review.js - Review data access (list, upsert, ratings summary).
+models/User.js - User data access (create, find by email/id).
+models/Wishlist.js - Wishlist data access (list, add/remove, status).
+package.json - Node app metadata, scripts, and dependencies.
+public/admin.html - Admin dashboard UI for product management.
+public/cancel.html - Payment cancelled page.
+public/cart.html - Cart page UI.
+public/checkout.html - Checkout page UI with Stripe card element.
+public/css/style.css - Global styles and layout.
+public/index.html - Home page with product listing and filters.
+public/js/admin-guard.js - Client guard to restrict admin page access.
+public/js/admin.js - Admin dashboard logic for CRUD products.
+public/js/api.js - Fetch helper for API calls with JSON handling.
+public/js/cart.js - Cart page logic (render, update, remove, checkout).
+public/js/checkout.js - Checkout flow and Stripe payment confirmation.
+public/js/index.js - Home page product listing, search, filters.
+public/js/login.js - Login form handling.
+public/js/orders.js - Order history page logic.
+public/js/product.js - Product detail page, reviews, wishlist, add to cart.
+public/js/register.js - Registration form handling.
+public/js/simple-nav.js - Lightweight script to render nav only.
+public/js/state.js - Cart state management and helpers.
+public/js/success.js - Payment success message logic.
+public/js/ui.js - Shared nav rendering and cart badge updates.
+public/js/wishlist.js - Wishlist page logic.
+public/login.html - Login page UI.
+public/orders.html - Order history page UI.
+public/product.html - Product detail page UI.
+public/register.html - Registration page UI.
+public/success.html - Payment success page.
+public/wishlist.html - Wishlist page UI.
+routes/admin.js - Admin API routes for product CRUD.
+routes/auth.js - Auth routes (register, login, logout, me).
+routes/checkout.js - Stripe payment intent creation.
+routes/orders.js - Order list and confirmation routes.
+routes/products.js - Product listing, categories, and detail routes.
+routes/reviews.js - Review listing and submission routes.
+routes/wishlist.js - Wishlist routes (list, status, add/remove).
+seed/seed.js - Seeds sample products and optional admin user.
+server.js - Express app setup, route wiring, static hosting.
