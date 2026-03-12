@@ -15,7 +15,7 @@ public/cancel.html - Payment cancelled page.
 public/cart.html - Cart page UI.
 public/checkout.html - Checkout page UI with Stripe card element.
 public/css/style.css - Global styles and layout.
-public/index.html - Home page with product listing and filters.
+# public/index.html - Home page with product listing and filters.
 public/js/admin-guard.js - Client guard to restrict admin page access.
 public/js/admin.js - Admin dashboard logic for CRUD products.
 public/js/api.js - Fetch helper for API calls with JSON handling.
@@ -23,7 +23,7 @@ public/js/cart.js - Cart page logic (render, update, remove, checkout).
 public/js/checkout.js - Checkout flow and Stripe payment confirmation.
 public/js/index.js - Home page product listing, search, filters.
 public/js/login.js - Login form handling.
-public/js/orders.js - Order history page logic.
+# public/js/orders.js - Order history page logic.
 public/js/product.js - Product detail page, reviews, wishlist, add to cart.
 public/js/register.js - Registration form handling.
 public/js/simple-nav.js - Lightweight script to render nav only.
@@ -31,7 +31,7 @@ public/js/state.js - Cart state management and helpers.
 public/js/success.js - Payment success message logic.
 public/js/ui.js - Shared nav rendering and cart badge updates.
 public/js/wishlist.js - Wishlist page logic.
-public/login.html - Login page UI.
+# public/login.html - Login page UI.
 public/orders.html - Order history page UI.
 public/product.html - Product detail page UI.
 public/register.html - Registration page UI.
