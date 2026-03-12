@@ -9,7 +9,7 @@
 # models/Review.js - Review data access (list, upsert, ratings summary).
 # models/User.js - User data access (create, find by email/id).
 # models/Wishlist.js - Wishlist data access (list, add/remove, status).
-package.json - Node app metadata, scripts, and dependencies.
+# package.json - Node app metadata, scripts, and dependencies.
 public/admin.html - Admin dashboard UI for product management.
 public/cancel.html - Payment cancelled page.
 public/cart.html - Cart page UI.
