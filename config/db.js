@@ -97,6 +97,31 @@ const initSchema = async () => {
   `);
 
   await ensureColumn({ table: "users", column: "is_admin", definition: "TINYINT DEFAULT 0" });
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS reviews (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      product_id INT NOT NULL,
+      user_id INT NOT NULL,
+      rating INT NOT NULL,
+      comment TEXT,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      UNIQUE KEY uniq_review (product_id, user_id),
+      FOREIGN KEY (product_id) REFERENCES products(id),
+      FOREIGN KEY (user_id) REFERENCES users(id)
+    )
+  `);
+
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS wishlists (
+      user_id INT NOT NULL,
+      product_id INT NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (user_id, product_id),
+      FOREIGN KEY (user_id) REFERENCES users(id),
+      FOREIGN KEY (product_id) REFERENCES products(id)
+    )
+  `);
 };
 
 const getDb = () => {

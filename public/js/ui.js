@@ -24,7 +24,7 @@ export const renderNav = async () => {
           <a href="/cart.html">Cart <span class="badge" data-cart-count>${cartCount}</span></a>
           ${
             user
-              ? `${user.isAdmin ? `<a href="/admin.html">Admin</a>` : ""}<a href="/orders.html">Orders</a><button class="button outline" data-logout>Logout</button>`
+              ? `${user.isAdmin ? `<a href="/admin.html">Admin</a>` : ""}<a href="/wishlist.html">Wishlist</a><a href="/orders.html">Orders</a><button class="button outline" data-logout>Logout</button>`
               : `<a href="/login.html">Login</a>`
           }
         </div>

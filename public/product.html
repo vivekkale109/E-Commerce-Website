@@ -9,6 +9,27 @@
   <body>
     <div data-nav></div>
     <main class="container" data-product></main>
+    <section class="container section" data-reviews-section>
+      <h2>Reviews</h2>
+      <div class="notice" data-review-summary></div>
+      <div class="grid" data-review-list></div>
+      <form class="form" data-review-form>
+        <select class="select" name="rating" required>
+          <option value="">Rating</option>
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Good</option>
+          <option value="3">3 - Average</option>
+          <option value="2">2 - Poor</option>
+          <option value="1">1 - Bad</option>
+        </select>
+        <textarea class="input" name="comment" placeholder="Write a review"></textarea>
+        <div style="display:flex; gap:12px;">
+          <button class="button" type="submit">Submit review</button>
+          <button class="button outline" type="button" data-wishlist-toggle>Wishlist</button>
+        </div>
+        <p class="notice" data-review-message></p>
+      </form>
+    </section>
     <script type="module" src="/js/product.js"></script>
   </body>
 </html>

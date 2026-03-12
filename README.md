@@ -10,6 +10,8 @@ A modern full-stack e-commerce demo with product browsing, cart management, auth
 - Checkout with Stripe Payment Intents
 - Order history for logged-in users
 - Admin dashboard with product management
+- Reviews and ratings per product
+- Wishlist for logged-in users
 
 ## Tech Stack
 - Frontend: HTML, CSS, JavaScript (vanilla)
@@ -50,3 +52,4 @@ Use Stripe test card `4242 4242 4242 4242` with any future date and any CVC.
 - Orders are created after payment confirmation.
 - Cart data is stored in the browser using localStorage.
 - Admin dashboard is available at `/admin.html` for admin users.
+- Wishlist is available at `/wishlist.html`.
