@@ -1,5 +1,6 @@
 import { renderNav } from "./ui.js";
 
+
 const message = document.querySelector("[data-success]");
 
 const init = async () => {
