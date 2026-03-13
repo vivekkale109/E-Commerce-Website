@@ -4,6 +4,7 @@ const Order = require("../models/Order");
 const { authRequired } = require("../middleware/auth");
 const { buildOrderFromItems } = require("./checkout");
 
+
 const router = express.Router();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
