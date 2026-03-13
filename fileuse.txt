@@ -36,7 +36,7 @@ public/orders.html - Order history page UI.
 public/product.html - Product detail page UI.
 public/register.html - Registration page UI.
 public/success.html - Payment success page.
-public/wishlist.html - Wishlist page UI.
+# public/wishlist.html - Wishlist page UI.
 # routes/admin.js - Admin API routes for product CRUD.
 # routes/auth.js - Auth routes (register, login, logout, me).
 # routes/checkout.js - Stripe payment intent creation.
