@@ -4,6 +4,7 @@ const { connectDb } = require("../config/db");
 const Product = require("../models/Product");
 const User = require("../models/User");
 
+
 const sampleProducts = [
   {
     name: "Lumen Wireless Earbuds",
