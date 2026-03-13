@@ -1,6 +1,7 @@
 import { api } from "./api.js";
 import { renderNav } from "./ui.js";
 
+
 const form = document.querySelector("[data-register]");
 const message = document.querySelector("[data-message]");
 
