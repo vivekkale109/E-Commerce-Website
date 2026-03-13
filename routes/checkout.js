@@ -3,6 +3,7 @@ const Stripe = require("stripe");
 const Product = require("../models/Product");
 const { authRequired } = require("../middleware/auth");
 
+
 const router = express.Router();
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
