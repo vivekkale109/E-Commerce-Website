@@ -5,6 +5,7 @@ export const api = async (path, options = {}) => {
     ...options
   });
 
+  
   if (!res.ok) {
     const data = await res.json().catch(() => ({}));
     throw new Error(data.message || "Request failed");

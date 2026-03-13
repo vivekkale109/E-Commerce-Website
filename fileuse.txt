@@ -18,7 +18,7 @@
 # public/index.html - Home page with product listing and filters.
 public/js/admin-guard.js - Client guard to restrict admin page access.
 public/js/admin.js - Admin dashboard logic for CRUD products.
-public/js/api.js - Fetch helper for API calls with JSON handling.
+# public/js/api.js - Fetch helper for API calls with JSON handling.
 # public/js/cart.js - Cart page logic (render, update, remove, checkout).
 # public/js/checkout.js - Checkout flow and Stripe payment confirmation.
 # public/js/index.js - Home page product listing, search, filters.
