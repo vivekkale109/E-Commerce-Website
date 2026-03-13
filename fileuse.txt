@@ -42,7 +42,7 @@ routes/auth.js - Auth routes (register, login, logout, me).
 routes/checkout.js - Stripe payment intent creation.
 routes/orders.js - Order list and confirmation routes.
 routes/products.js - Product listing, categories, and detail routes.
-routes/reviews.js - Review listing and submission routes.
+# routes/reviews.js - Review listing and submission routes.
 # routes/wishlist.js - Wishlist routes (list, status, add/remove).
 # seed/seed.js - Seeds sample products and optional admin user.
 # server.js - Express app setup, route wiring, static hosting.

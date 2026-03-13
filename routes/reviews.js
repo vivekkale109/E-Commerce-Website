@@ -2,6 +2,7 @@ const express = require("express");
 const { authRequired } = require("../middleware/auth");
 const Review = require("../models/Review");
 
+
 const router = express.Router();
 
 router.get("/:productId", async (req, res) => {
