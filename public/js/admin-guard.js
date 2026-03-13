@@ -1,5 +1,6 @@
 import { api } from "./api.js";
 
+
 const guard = async () => {
   try {
     const { user } = await api("/api/auth/me");

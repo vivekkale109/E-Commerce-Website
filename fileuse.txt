@@ -16,7 +16,7 @@
 # public/checkout.html - Checkout page UI with Stripe card element.
 # public/css/style.css - Global styles and layout.
 # public/index.html - Home page with product listing and filters.
-public/js/admin-guard.js - Client guard to restrict admin page access.
+# public/js/admin-guard.js - Client guard to restrict admin page access.
 # public/js/admin.js - Admin dashboard logic for CRUD products.
 # public/js/api.js - Fetch helper for API calls with JSON handling.
 # public/js/cart.js - Cart page logic (render, update, remove, checkout).
