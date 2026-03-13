@@ -2,6 +2,7 @@ import { api } from "./api.js";
 import { formatCurrency } from "./state.js";
 import { renderNav } from "./ui.js";
 
+
 const listEl = document.querySelector("[data-admin-list]");
 const form = document.querySelector("[data-admin-form]");
 const message = document.querySelector("[data-admin-message]");
