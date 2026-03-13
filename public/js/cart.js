@@ -1,6 +1,7 @@
 import { getCart, updateQuantity, removeItem, cartTotal, formatCurrency } from "./state.js";
 import { renderNav } from "./ui.js";
 
+
 const list = document.querySelector("[data-cart-list]");
 const totalEl = document.querySelector("[data-cart-total]");
 const checkoutBtn = document.querySelector("[data-checkout]");
