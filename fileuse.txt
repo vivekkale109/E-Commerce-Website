@@ -38,8 +38,8 @@ public/register.html - Registration page UI.
 public/success.html - Payment success page.
 public/wishlist.html - Wishlist page UI.
 routes/admin.js - Admin API routes for product CRUD.
-routes/auth.js - Auth routes (register, login, logout, me).
-routes/checkout.js - Stripe payment intent creation.
+# routes/auth.js - Auth routes (register, login, logout, me).
+# routes/checkout.js - Stripe payment intent creation.
 # routes/orders.js - Order list and confirmation routes.
 # routes/products.js - Product listing, categories, and detail routes.
 # routes/reviews.js - Review listing and submission routes.
