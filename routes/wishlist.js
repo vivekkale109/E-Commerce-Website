@@ -2,6 +2,7 @@ const express = require("express");
 const { authRequired } = require("../middleware/auth");
 const Wishlist = require("../models/Wishlist");
 
+
 const router = express.Router();
 
 router.get("/", authRequired, async (req, res) => {
