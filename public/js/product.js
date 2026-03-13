@@ -2,6 +2,7 @@ import { api } from "./api.js";
 import { addToCart, formatCurrency } from "./state.js";
 import { renderNav } from "./ui.js";
 
+
 const productWrap = document.querySelector("[data-product]");
 const reviewList = document.querySelector("[data-review-list]");
 const reviewSummary = document.querySelector("[data-review-summary]");
