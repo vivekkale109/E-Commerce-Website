@@ -32,7 +32,7 @@ public/js/success.js - Payment success message logic.
 public/js/ui.js - Shared nav rendering and cart badge updates.
 public/js/wishlist.js - Wishlist page logic.
 # public/login.html - Login page UI.
-public/orders.html - Order history page UI.
+# public/orders.html - Order history page UI.
 # public/product.html - Product detail page UI.
 # public/register.html - Registration page UI.
 # public/success.html - Payment success page.
