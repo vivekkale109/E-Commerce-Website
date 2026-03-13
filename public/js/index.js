@@ -2,6 +2,7 @@ import { api } from "./api.js";
 import { addToCart, formatCurrency } from "./state.js";
 import { renderNav } from "./ui.js";
 
+
 const productGrid = document.querySelector("[data-product-grid]");
 const searchInput = document.querySelector("[data-search]");
 const categorySelect = document.querySelector("[data-category]");
