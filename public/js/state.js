@@ -1,5 +1,6 @@
 const CART_KEY = "ecom_cart_v1";
 
+
 export const getCart = () => {
   const raw = localStorage.getItem(CART_KEY);
   return raw ? JSON.parse(raw) : [];
