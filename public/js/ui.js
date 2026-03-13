@@ -1,6 +1,7 @@
 import { getCart } from "./state.js";
 import { api } from "./api.js";
 
+
 export const renderNav = async () => {
   const nav = document.querySelector("[data-nav]");
   if (!nav) return;

@@ -29,7 +29,7 @@ public/js/register.js - Registration form handling.
 public/js/simple-nav.js - Lightweight script to render nav only.
 public/js/state.js - Cart state management and helpers.
 public/js/success.js - Payment success message logic.
-public/js/ui.js - Shared nav rendering and cart badge updates.
+# public/js/ui.js - Shared nav rendering and cart badge updates.
 # public/js/wishlist.js - Wishlist page logic.
 # public/login.html - Login page UI.
 # public/orders.html - Order history page UI.
