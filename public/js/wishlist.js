@@ -2,6 +2,7 @@ import { api } from "./api.js";
 import { renderNav } from "./ui.js";
 import { formatCurrency, addToCart } from "./state.js";
 
+
 const listEl = document.querySelector("[data-wishlist]");
 
 const renderList = (products) => {
