@@ -4,6 +4,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const { connectDb } = require("./config/db");
 
+
 const authRoutes = require("./routes/auth");
 const productRoutes = require("./routes/products");
 const checkoutRoutes = require("./routes/checkout");
