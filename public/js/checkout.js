@@ -2,6 +2,7 @@ import { api } from "./api.js";
 import { getCart, cartTotal, formatCurrency, clearCart } from "./state.js";
 import { renderNav } from "./ui.js";
 
+
 const summary = document.querySelector("[data-summary]");
 const totalEl = document.querySelector("[data-total]");
 const form = document.querySelector("[data-checkout]");
